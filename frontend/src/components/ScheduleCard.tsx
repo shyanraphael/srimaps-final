@@ -24,7 +24,23 @@ export function ScheduleCard({ schedule, index }: ScheduleCardProps) {
         scale: 1.02,
         boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)'
       }}
-      className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-all"></motion.div>
+      className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 hover:shadow-lg transition-all">
+
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-2">
+          <div className="bg-primary-600 text-white px-3 py-1 rounded-lg font-bold text-sm">
+            {schedule.route}
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2 text-primary-600 dark:text-primary-400 font-semibold">
+          <ClockIcon className="w-5 h-5" />
+          <span className="text-lg">{schedule.departureTime}</span>
+        </div>
+      </div>
+    
+    </motion.div>
   );
 }
+
 
