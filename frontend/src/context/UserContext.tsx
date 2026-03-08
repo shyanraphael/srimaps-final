@@ -55,6 +55,12 @@ export function UserProvider({ children }: UserProviderProps){
     }
     return false;
   };
+  const logoutDriver = () => {
+    setDriver(null);
+    setRole(null);
+    setIsDriverSharingLocation(false);
+  };
+
 
 
 
