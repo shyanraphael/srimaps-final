@@ -39,7 +39,10 @@ const driverCredentials: Record<
   }
 };
 
-export function UserProvider({ children }: UserProviderProps)
+export function UserProvider({ children }: UserProviderProps){
+    const [role, setRole] = useState<UserRole>(null);
+    const [driver, setDriver] = useState<Driver | null>(null);
+
 
 
 
