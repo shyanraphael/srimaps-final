@@ -13,5 +13,7 @@ interface UserContextType {
   isDriverSharingLocation: boolean;
   setIsDriverSharingLocation: (sharing: boolean) => void;
 }
+const UserContext = createContext<UserContextType | undefined>(undefined);
+
 
 
