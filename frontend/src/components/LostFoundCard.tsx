@@ -26,7 +26,8 @@ export function LostFoundCard({
 }: LostFoundCardProps) {
     const { language } = useLanguage();
     const isLost = type === 'lost';
-    return ( <motion.div
+    return ( 
+    <motion.div
             initial={{
                 opacity: 0,
                 y: 20
@@ -74,9 +75,23 @@ export function LostFoundCard({
               <span>{item.time}</span>
             </div>
           </div>
+          <motion.button
+            whileHover={{
+              scale: 1.05
+            }}
+            whileTap={{
+              scale: 0.95
+            }}
+            onClick={() => onAction(item)}
+            className={`w-full sm:w-auto px-6 py-2 rounded-lg font-medium text-white transition-colors ${isLost ? 'bg-green-600 hover:bg-green-700' : 'bg-primary-600 hover:bg-primary-700'}`}>
+
+            {isLost ?
+            translate('iFoundThis', language) :
+            translate('claimItem', language)}
+          </motion.button>
                 
-            </div>
-        </div>     
-    </motion.div>
+        </div>
+    </div>     
+</motion.div>
            );
 }
