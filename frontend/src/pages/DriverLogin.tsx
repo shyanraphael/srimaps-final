@@ -129,10 +129,19 @@ export function DriverLogin({ onBack }: DriverLoginProps) {
             </motion.button>
           </form>
           
+          <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+            <p className="text-xs text-gray-600 dark:text-gray-400 text-center">
+              {translate('demoCredentials', language)}
+              <br />
+              <span className="font-mono">138 / driver138</span>
+            </p>
+          </div>
+          
         </motion.div>
       </div>
     </div>
   );
 
 }
+
 
