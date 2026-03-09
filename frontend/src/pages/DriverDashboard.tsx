@@ -58,8 +58,86 @@ export function DriverDashboard() {
           {translate('logout', language)}
         </motion.button>
       </motion.div>
+
+      {/* Location Sharing Control */}
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 20
+        }}
+        animate={{
+          opacity: 1,
+          y: 0
+        }}
+        className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-3">
+            <RadioIcon
+              className={`w-6 h-6 ${isDriverSharingLocation ? 'text-green-600 dark:text-green-400' : 'text-gray-400'}`} />
+
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                {translate('locationSharing', language)}
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                {isDriverSharingLocation ?
+                translate('sharingActive', language) :
+                translate('sharingInactive', language)}
+              </p>
+            </div>
+          </div>
+
+          <motion.button
+            whileHover={{
+              scale: 1.05
+            }}
+            whileTap={{
+              scale: 0.95
+            }}
+            onClick={() => setIsDriverSharingLocation(!isDriverSharingLocation)}
+            className={`px-6 py-3 rounded-lg font-semibold transition-colors ${isDriverSharingLocation ? 'bg-red-600 hover:bg-red-700 text-white' : 'bg-green-600 hover:bg-green-700 text-white'}`}>
+
+            {isDriverSharingLocation ?
+            translate('stopSharing', language) :
+            translate('startSharing', language)}
+          </motion.button>
+        </div>
+
+        {isDriverSharingLocation && driverBus &&
+        <motion.div
+          initial={{
+            opacity: 0,
+            height: 0
+          }}
+          animate={{
+            opacity: 1,
+            height: 'auto'
+          }}
+          className="mt-4 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+
+            <div className="flex items-start gap-2">
+              <MapPinIcon className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="text-sm font-medium text-green-900 dark:text-green-300">
+                  {translate('currentLocation', language)}
+                </p>
+                <p className="text-sm text-green-700 dark:text-green-400">
+                  {driverBus.currentLocation.lat.toFixed(4)},{' '}
+                  {driverBus.currentLocation.lng.toFixed(4)}
+                </p>
+                <p className="text-xs text-green-600 dark:text-green-500 mt-1">
+                  {translate('route', language)}: {driverBus.route}
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        }
+      </motion.div>
+      
     </div>
   );
 
 }
+
 
