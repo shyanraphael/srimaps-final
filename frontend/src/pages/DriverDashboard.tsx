@@ -134,10 +134,26 @@ export function DriverDashboard() {
           </motion.div>
         }
       </motion.div>
-      
+      {/* Map */}
+      {driverBus &&
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.95
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1
+        }}
+        className="h-[500px]">
+
+          <BusMap buses={[driverBus]} selectedBus={driverBus} />
+        </motion.div>
+      }
     </div>
   );
 
 }
+
 
 
