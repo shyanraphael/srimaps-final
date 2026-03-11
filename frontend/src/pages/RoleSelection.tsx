@@ -6,3 +6,4 @@ import { translate } from '../utils/translations';
 interface RoleSelectionProps {
   onSelectRole: (role: 'passenger' | 'driver') => void;
 }
+export function RoleSelection({ onSelectRole }: RoleSelectionProps) {
