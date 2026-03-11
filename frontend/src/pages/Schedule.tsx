@@ -26,7 +26,9 @@ export function Schedule() {
       setFilteredSchedules(filtered.length > 0 ? filtered : mockSchedules);
     }
   };
-  
+  // Group schedules by route
+  const groupedSchedules = filteredSchedules.reduce(
+
 
 
 
