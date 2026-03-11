@@ -11,6 +11,8 @@ export function Schedule() {
   const [routeNumber, setRouteNumber] = useState('');
   const [startDest, setStartDest] = useState('');
   const [endDest, setEndDest] = useState('');
+  const [filteredSchedules, setFilteredSchedules] =
+  useState<ScheduleItem[]>(mockSchedules);
 
 
 
