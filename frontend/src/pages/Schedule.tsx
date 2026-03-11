@@ -142,6 +142,8 @@ export function Schedule() {
     
       {/* Schedules by Route */}
       <div className="space-y-8">
+        {Object.entries(groupedSchedules).map(
+          ([route, schedules], groupIndex) =>
 
 
 
