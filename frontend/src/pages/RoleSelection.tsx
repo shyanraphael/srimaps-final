@@ -28,6 +28,8 @@ export function RoleSelection({ onSelectRole }: RoleSelectionProps) {
           <p className="text-lg text-gray-600 dark:text-gray-400">
             {translate('selectYourRole', language)}
           </p>
+        </motion.div>
+
 
 
 
