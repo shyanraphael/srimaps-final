@@ -7,4 +7,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translate } from '../utils/translations';
 export function Schedule() {
   const { language } = useLanguage();
+  const [searchType, setSearchType] = useState<'number' | 'route'>('number');
+
 
