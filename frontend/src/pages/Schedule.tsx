@@ -58,6 +58,7 @@ export function Schedule() {
           {translate('busSchedule', language)}
         </h1>
       </motion.div>      
+      {/* Search Panel */}
 
 
 
