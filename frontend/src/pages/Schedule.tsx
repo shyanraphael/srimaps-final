@@ -161,6 +161,8 @@ export function Schedule() {
               <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                 {translate('route', language)} {route}
               </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {schedules.map((schedule, index) =>
 
 
 
