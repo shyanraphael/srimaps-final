@@ -146,6 +146,17 @@ export function Schedule() {
           ([route, schedules], groupIndex) =>
           <motion.div
             key={route}
+            initial={{
+              opacity: 0,
+              y: 20
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
+            transition={{
+              delay: groupIndex * 0.1
+            }}>
 
 
 
