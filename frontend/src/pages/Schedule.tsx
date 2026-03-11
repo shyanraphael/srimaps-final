@@ -40,6 +40,16 @@ export function Schedule() {
   return (
     <div className="space-y-6"> 
       {/* Header */}
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: -20
+        }}
+        animate={{
+          opacity: 1,
+          y: 0
+        }}
+        className="flex items-center gap-3">
 
 
 
