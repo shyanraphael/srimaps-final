@@ -10,6 +10,7 @@ export function Schedule() {
   const [searchType, setSearchType] = useState<'number' | 'route'>('number');
   const [routeNumber, setRouteNumber] = useState('');
   const [startDest, setStartDest] = useState('');
+  const [endDest, setEndDest] = useState('');
 
 
 
