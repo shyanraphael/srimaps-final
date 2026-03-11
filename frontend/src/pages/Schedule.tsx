@@ -83,6 +83,19 @@ export function Schedule() {
 
             {translate('routeNumber', language)}
           </motion.button>
+          <motion.button
+            whileHover={{
+              scale: 1.02
+            }}
+            whileTap={{
+              scale: 0.98
+            }}
+            onClick={() => setSearchType('route')}
+            className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${searchType === 'route' ? 'bg-primary-600 text-white' : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'}`}>
+
+            {translate('route', language)}
+          </motion.button>
+        </div>
 
 
 
