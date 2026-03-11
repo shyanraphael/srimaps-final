@@ -163,6 +163,12 @@ export function Schedule() {
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {schedules.map((schedule, index) =>
+              <ScheduleCard
+                key={schedule.id}
+                schedule={schedule}
+                index={index} />
+
+              )}
 
 
 
