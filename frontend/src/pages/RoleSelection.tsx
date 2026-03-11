@@ -31,6 +31,30 @@ export function RoleSelection({ onSelectRole }: RoleSelectionProps) {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
+          {/* Passenger Card */}
+          <motion.button
+            initial={{
+              opacity: 0,
+              x: -20
+            }}
+            animate={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              delay: 0.1
+            }}
+            whileHover={{
+              scale: 1.02,
+              y: -4
+            }}
+            whileTap={{
+              scale: 0.98
+            }}
+            onClick={() => onSelectRole('passenger')}
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all group">
+        
+
 
 
 
