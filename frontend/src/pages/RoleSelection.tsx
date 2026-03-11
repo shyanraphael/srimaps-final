@@ -8,4 +8,6 @@ interface RoleSelectionProps {
 }
 export function RoleSelection({ onSelectRole }: RoleSelectionProps) {
   const { language } = useLanguage();
+  return (
+    <div className="min-h-[80vh] flex items-center justify-center">
 
