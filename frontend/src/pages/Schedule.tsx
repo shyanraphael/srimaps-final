@@ -169,6 +169,14 @@ export function Schedule() {
                 index={index} />
 
               )}
+              </div>
+            </motion.div>
+
+        )}
+      </div>
+    </div>);
+
+}
 
 
 
