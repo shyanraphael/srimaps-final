@@ -96,7 +96,9 @@ export function Schedule() {
             {translate('route', language)}
           </motion.button>
         </div>
-
+        
+        {/* Search Inputs */}
+        <div className="flex flex-col sm:flex-row gap-4">
 
 
 
