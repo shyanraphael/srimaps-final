@@ -28,6 +28,17 @@ export function Schedule() {
   };
   // Group schedules by route
   const groupedSchedules = filteredSchedules.reduce(
+    (acc, schedule) => {
+      if (!acc[schedule.route]) {
+        acc[schedule.route] = [];
+      }
+      acc[schedule.route].push(schedule);
+      return acc;
+    },
+    {} as Record<string, ScheduleItem[]>
+  );
+   
+
 
 
 
