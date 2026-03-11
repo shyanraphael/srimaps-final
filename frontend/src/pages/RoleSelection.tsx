@@ -65,7 +65,47 @@ export function RoleSelection({ onSelectRole }: RoleSelectionProps) {
             </p>
           </motion.button>
 
+          {/* Driver Card */}
+          <motion.button
+            initial={{
+              opacity: 0,
+              x: 20
+            }}
+            animate={{
+              opacity: 1,
+              x: 0
+            }}
+            transition={{
+              delay: 0.2
+            }}
+            whileHover={{
+              scale: 1.02,
+              y: -4
+            }}
+            whileTap={{
+              scale: 0.98
+            }}
+            onClick={() => onSelectRole('driver')}
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all group">
+
+            <div className="bg-teal-100 dark:bg-teal-900/30 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <TruckIcon className="w-12 h-12 text-teal-600 dark:text-teal-400" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
+              {translate('driver', language)}
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              {translate('driverDescription', language)}
+            </p>
+          </motion.button>
+        </div>
+      </div>
+    </div>);
+
+}
+
         
+
 
 
 
