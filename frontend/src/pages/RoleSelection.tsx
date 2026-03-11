@@ -1,3 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { UsersIcon, TruckIcon } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translate } from '../utils/translations';
