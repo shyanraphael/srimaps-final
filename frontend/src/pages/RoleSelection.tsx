@@ -21,5 +21,13 @@ export function RoleSelection({ onSelectRole }: RoleSelectionProps) {
             y: 0
           }}
           className="text-center mb-12">
+          
+          <h1 className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+            {translate('welcomeToSriMaps', language)}
+          </h1>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            {translate('selectYourRole', language)}
+          </p>
+
 
 
